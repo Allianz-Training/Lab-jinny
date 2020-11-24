@@ -1,0 +1,27 @@
+Class = flash sale
+
+Property 
+	-Product
+	-Price
+	-number of sale
+	-time
+
+Action
+	-Selling
+	-Timing
+	-Update Price
+
+
+Class = Best seller of this week
+
+Property 
+	-Product
+	-Order
+	-number of sale
+	-Price
+
+Action 
+	-Update Product
+	-Update Pictures
+
+
