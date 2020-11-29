@@ -32,6 +32,32 @@ public class HomeWork3 {
 		}
 		
 	}
+	public static void draw12(int n) {
+		for(int i=0;i<n;i++) {
+			for(int j=0; j<n;j++) {
+				if(j==i) {
+				System.out.print("-");
+					continue;
+				}
+				System.out.print("*");
+			}
+			System.out.println();
+			
+			}
+		}
+	public static void draw13(int n) {
+		for (int i = n;i>0;i--) {
+			for(int j =1;j<=n;j++) {
+				if(j == i) {
+					System.out.print("-");
+						continue;
+				}
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+		
+	}
 	
 	
 
