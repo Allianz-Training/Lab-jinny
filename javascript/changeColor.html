@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2{
+            color:pink;
+            background-color: green;
+            text-align: center;
+            font-size: 1rem;
+        }
+        body{
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <input id = "in1" type="text" placeholder="text color"> 
+    <input id = "in2" type="text" placeholder="background color"> 
+    <button onclick="changcolor()"> Change Color</button> 
+    <h2 style ="padding: 1rem"> Yellow duck is the best</h2>
+
+    <script> 
+        function changcolor(){
+            alert("change color function");
+            let tcolor = document.querySelector('#in1').value      
+            let bcolor = document.querySelector('#in2').value
+            alert(tcolor)
+            alert(bcolor)
+            document.querySelector('h2').style.color = tcolor
+            document.querySelector('h2').style.backgroundColor = bcolor
+          }
+    </script>
+
+</body>
+</html>
