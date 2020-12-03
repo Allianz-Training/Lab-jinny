@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="C:/Users/jinnapatkae/Desktop/DATABASE/database.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="150"/><column_width id="3" width="1545"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,8:mainReserves"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="Boats" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="61"/><column index="2" value="140"/><column index="3" value="64"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Reserves" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="61"/><column index="2" value="94"/><column index="3" value="182"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Sailors" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="61"/><column index="2" value="78"/><column index="3" value="73"/><column index="4" value="61"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1">-- SELECT sname,age FROM Sailors 
+
+-- SELECT DISTINCT sname,age FROM Sailors 
+
+-- SELECT Sailors.sname FROM Sailors INNER JOIN Reserves ON Sailors.sid = Reserves.sid WHERE Reserves.bid == 103;
+
+-- SELECT Reserves.sid FROM Reserves INNER JOIN Boats ON Reserves.bid = Boats.bid WHERE Boats.Color = &quot;Red&quot;;
+-- SELECT DISTINCT Reserves.sid FROM Reserves INNER JOIN Boats ON Reserves.bid = Boats.bid WHERE Boats.Color = &quot;Red&quot;;
+
+-- SELECT Sailors.sname FROM Sailors INNER JOIN Boats ON Reserves.bid = Boats.bid INNER JOIN Reserves ON Reserves.sid = Sailors.sid WHERE Boats.Color = &quot;Red&quot;;
+
+-- SELECT Boats.Color FROM Sailors INNER JOIN Reserves ON Sailors.sid = Reserves.sid INNER JOIN Boats ON Reserves.bid = Boats.bid WHERE Sailors.sname = &quot;Lubber&quot;;
+
+-- SELECT DISTINCT Sailors.sname FROM Sailors INNER JOIN Reserves ON Sailors.sid = Reserves.sid WHERE Sailors.sid = Reserves.sid;
+
+-- SELECT DISTINCT Sailors.sname FROM Sailors, Boats, Reserves WHERE Sailors.sid = Reserves.sid AND Reserves.bid = Boats.bid AND Boats.Color = &quot;Red&quot;
+-- UNION SELECT DISTINCT Sailors.sname FROM Sailors, Boats, Reserves WHERE Sailors.sid = Reserves.sid AND Reserves.bid = Boats.bid AND Boats.Color = &quot;Green&quot;
+
+-- SELECT DISTINCT Sailors.sname FROM Sailors, Boats, Reserves WHERE Sailors.sid = Reserves.sid AND Reserves.bid = Boats.bid AND Boats.Color = &quot;Red&quot;
+-- INTERSECT SELECT DISTINCT Sailors.sname FROM Sailors, Boats, Reserves WHERE Sailors.sid = Reserves.sid AND Reserves.bid = Boats.bid AND Boats.Color = &quot;Green&quot;
+
+SELECT DISTINCT Sailors.sid FROM Sailors, Boats, Reserves WHERE Sailors.sid = Reserves.sid AND Reserves.bid = Boats.bid AND Boats.Color != &quot;Green&quot; AND  Boats.Color != &quot;Blue&quot;
+
+</sql><current_tab id="0"/></tab_sql></sqlb_project>

@@ -1,0 +1,25 @@
+
+-- SELECT sname,age FROM Sailors 
+
+-- SELECT DISTINCT sname,age FROM Sailors 
+
+-- SELECT Sailors.sname FROM Sailors INNER JOIN Reserves ON Sailors.sid = Reserves.sid WHERE Reserves.bid == 103;
+
+-- SELECT Reserves.sid FROM Reserves INNER JOIN Boats ON Reserves.bid = Boats.bid WHERE Boats.Color = "Red";
+-- SELECT DISTINCT Reserves.sid FROM Reserves INNER JOIN Boats ON Reserves.bid = Boats.bid WHERE Boats.Color = "Red";
+
+-- SELECT Sailors.sname FROM Sailors INNER JOIN Boats ON Reserves.bid = Boats.bid INNER JOIN Reserves ON Reserves.sid = Sailors.sid WHERE Boats.Color = "Red";
+
+-- SELECT Boats.Color FROM Sailors INNER JOIN Reserves ON Sailors.sid = Reserves.sid INNER JOIN Boats ON Reserves.bid = Boats.bid WHERE Sailors.sname = "Lubber";
+
+-- SELECT DISTINCT Sailors.sname FROM Sailors INNER JOIN Reserves ON Sailors.sid = Reserves.sid WHERE Sailors.sid = Reserves.sid;
+
+-- SELECT DISTINCT Sailors.sname FROM Sailors, Boats, Reserves WHERE Sailors.sid = Reserves.sid AND Reserves.bid = Boats.bid AND Boats.Color = "Red"
+-- UNION SELECT DISTINCT Sailors.sname FROM Sailors, Boats, Reserves WHERE Sailors.sid = Reserves.sid AND Reserves.bid = Boats.bid AND Boats.Color = "Green"
+
+--SELECT DISTINCT s.sname FROM Sailors s, Boats b1, Reserves r1, Boats b2, Reserves r2 
+--WHERE s.sid = r1.sid AND r1.bid = b1.bid AND s.sid = r2.sid AND r2.bid = b2.bid AND
+--(b1.color="Red" AND B2.color = "Green")
+
+--SELECT DISTINCT Sailors.sid FROM Sailors, Boats, Reserves WHERE Sailors.sid = Reserves.sid AND Reserves.bid = Boats.bid AND Boats.Color != "Green" AND  Boats.Color != "Blue"
+
