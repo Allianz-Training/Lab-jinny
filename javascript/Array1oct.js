@@ -53,7 +53,10 @@ let arrayCalAge = [
     {name:'banana',birth:'1990-10-01'},
     {name:'watermelon',birth:'1985-12-01'}
 ]
-let arrayCalAge1 = arrayCalAge.map(item => item[1])
+let arrayCalAge1 = arrayCalAge.map(item => {
+    const year = item.birth.split('-')[0];
+    return {...item,age: 2019-year}
+})
 
 //1.12 **
 let arrayHTML = [
@@ -61,9 +64,12 @@ let arrayHTML = [
     {name:'banana',birth:'1990-10-01'},
     {name:'watermelon',birth:'1985-12-30'}
 ]
+
+
 let arrayHTML1 = arrayHTML.map(item => {
-    return ","
+    return `<tr> <td>${obj.name}</td> <td>${new Date(obj.birth).toUTCString().slice(5, 16).toLowerCase()}</td></tr>`
 })
+
 
 //2.1
 let arrayfil = [1,2,30,400]
@@ -108,8 +114,22 @@ let arrayTypeString2 = arrayTypeString1.filter(item => typeof item == 'string');
 
 //2.10
 let arrayCAP1 = ['APPLE','appLE','PEACH','PEach'];
-let arrayCAP2 = arrayCAP1.filter(item => item == item.toUpperCase() );
+let arrayCAP2 = arrayCAP1.filter(item => item == item.toUpperCase() ===item );
 
+// 2.11
+array10month1 = [
+    {name: 'apple', birth: '2001-01-01'},
+    {name: 'banana', birth: '1990-10-10'},
+    {name: 'watermelon', birth: '1985-12-30'},
+    {name: 'peach', birth: '2002-10-13'},
+]
+
+array10month2 = array10month1.filter(obj => (new Date(obj.birth)).getMonth() === 9)
+console.log( array2)
+
+// 2.12
+array2000 = array10month1.filter(obj => (new Date(obj.birth)).getFullYear() < 2000)
+console.log( array2)
 
 
 
@@ -132,5 +152,8 @@ let arrayCAP2 = arrayCAP1.filter(item => item == item.toUpperCase() );
 //console.log(arrayPositive2)
 //console.log(arrayDivided2)
 //console.log(arrayTypeString2)
-console.log(arrayCAP2)
+//console.log(arrayCAP2)
+//console.log(arrayCalAge1)
+//console.log(array10month2)
+//console.log(array2000)
 
