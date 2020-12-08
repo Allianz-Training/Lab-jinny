@@ -1,0 +1,11 @@
+var text;
+text = "hello world";
+var text2;
+text2 = "Hello Nunu";
+var str = "hello";
+var str1 = "world";
+console.log(text[12]);
+console.log(text.charAt(12));
+console.log(text.length);
+//console.log(text2);
+console.log(str + " " + str1);
