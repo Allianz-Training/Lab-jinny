@@ -1,0 +1,13 @@
+<div class="head">
+  <h2>{{ title }}</h2>
+  Set Title: <input [(ngModel)]="title" />
+</div>
+
+<ul>
+  <li *ngFor="let item of items">
+    <span *ngIf="item !== 5">{{ item }}</span>
+    <b *ngIf="item === 5">{{ item }}</b>
+  </li>
+</ul>
+<app-navbar></app-navbar>
+<app-category-menu></app-category-menu>

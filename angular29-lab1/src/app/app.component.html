@@ -1,0 +1,13 @@
+<div>
+  <h2>HOME</h2>
+  <!-- <app-product-list #productList></app-product-list> -->
+  <router-outlet>
+    <div>
+      <ul>
+        <li><a [routerLink]="['/']"> Home </a></li>
+        <!-- <li><a [routerLink]="['/productitem']"> Product Item </a></li> -->
+        <li><a [routerLink]="['/productlist']"> Product List </a></li>
+      </ul>
+    </div>
+  </router-outlet>
+</div>
