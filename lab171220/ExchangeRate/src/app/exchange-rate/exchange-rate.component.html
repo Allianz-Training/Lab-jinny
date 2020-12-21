@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+<body>
+  <form [formGroup]="form" >
+  <div>
+    Base Money
+    <span style="color: red" *ngIf="form.get('base').errors?.required">
+      *
+    </span>
+  </div>
+  <div style="text-align: center;">
+    <input formControlName="base" placeholder="Your answer"class="form-control" />
+  </div>
+  <div>
+    Money from base
+    <span style="color: red" *ngIf="form.get('moneyBase').errors?.required">
+      *
+    </span>
+  </div>
+  <div>
+    <input
+      formControlName="moneyBase"
+      placeholder="Your answer"
+      class="form-control"
+    />
+  </div>
+  <div>
+    Currency
+    <span style="color: red" *ngIf="form.get('currency').errors?.required">
+      *
+    </span>
+  </div>
+  <div>
+    <input
+      formControlName="currency"
+      placeholder="Your answer"
+      class="form-control"
+    />
+  </div>
+  <br />
+  <div>Convert result : {{ convertMoney }}</div>
+  <br />
+
+  <button
+    (click)="getFromBase()"
+    [disabled]="form.invalid"
+    class="btn btn-primary"
+  >
+    CONVERT
+  </button>
+</form>
+</body>
+</html>
+
